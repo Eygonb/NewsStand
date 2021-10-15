@@ -31,7 +31,7 @@ public class InjectPropertyAnnotationObjectConfigurator implements ObjectConfigu
             throw new RuntimeException("Error with reading properties file");
         }
 
-        propertiesMap = lines.map(line -> line.split("=")).collect(toMap(arr -> arr[0], arr -> arr[1]));
+        propertiesMap = lines.map(line -> line.split("=")).collect(toMap(arr -> arr[0].trim(), arr -> arr[1].trim()));
 
     }
 
